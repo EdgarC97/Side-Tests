@@ -1,0 +1,135 @@
+* {
+    font-family: "Roboto" , "sans-serif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(28, 26, 26, 0.342) 50%, rgba(23, 19, 19, 0.274) 100%), url(./assets/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: center top 60%;
+}
+
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > span {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2F195A;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i ) * (360deg / 50 )));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+    0% {
+        background-color: #3F04BF;
+    }
+    25% {
+        background-color: #52E4FF;
+    }
+}
+
+.login-box{
+    position: absolute;
+    width: 400px;
+    /* background-color: aqua; */
+}
+
+.login-box >form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #97F23D;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+.input-box > input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    font-size: 1em;
+    border-radius: 40px;
+    padding: 0 20px;
+    transition: .5s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #21b393;
+}
+
+
+.input-box > label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 1px;
+    font-size: .8em;
+    padding:  0 6px;
+}
+
+.forgot-pass {
+   margin: -15px 0 10px;
+   text-align: center; 
+}
+
+.forgot-pass > a {
+    font-size: .85em;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #97F23D ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    color: #110273;
+    font-size: 1em ;
+    font-weight: 600;
+}
