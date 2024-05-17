@@ -1,11 +1,12 @@
+/* Establece la fuente, el margen, el relleno y el box-sizing para todos los elementos en la página. */
 * {
     font-family: "Roboto" , "sans-serif";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
+/* Establece el cuerpo de la página para que se muestre como un contenedor flexible centrado, con una altura mínima de 100vh (altura de la ventana del navegador). También establece una imagen de fondo con un gradiente. */
 body {
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@ body {
     background-position: center top 60%;
 }
 
+/* Establece el contenedor para que se muestre como un contenedor flexible centrado, con un tamaño específico. */
 .container{
     position: relative;
     width: 256px;
@@ -27,6 +29,7 @@ body {
     align-items: center;
 }
 
+/* Establece el estilo para los elementos span dentro del contenedor. */
 .container > span {
     position: absolute;
     left: 0;
@@ -40,6 +43,7 @@ body {
     animation-delay: calc(var(--i) * (3s / 50));
 }
 
+/* Define la animación animateBlink. */
 @keyframes animateBlink {
     0% {
         background-color: #3F04BF;
@@ -49,27 +53,32 @@ body {
     }
 }
 
+/* Establece el estilo para el cuadro de inicio de sesión. */
 .login-box{
     position: absolute;
     width: 400px;
-    /* background-color: aqua; */
 }
 
+/* Establece el estilo para el formulario dentro del cuadro de inicio de sesión. */
 .login-box >form {
     width: 100%;
     padding: 0 50px;
 }
 
+/* Establece el estilo para los encabezados h2. */
 h2 {
     font-size: 2em;
     color: #97F23D;
     text-align: center;
 }
 
+/* Establece el estilo para los cuadros de entrada. */
 .input-box {
     position: relative;
     margin: 25px 0;
 }
+
+/* Establece el estilo para los elementos de entrada dentro de los cuadros de entrada. */
 .input-box > input {
     width: 100%;
     height: 50px;
@@ -83,12 +92,13 @@ h2 {
     transition: .5s ease;
 }
 
+/* Cambia el color del borde de los elementos de entrada cuando están enfocados o son válidos. */
 .input-box input:focus,
 .input-box input:valid {
     border-color: #21b393;
 }
 
-
+/* Establece el estilo para las etiquetas dentro de los cuadros de entrada. */
 .input-box > label {
     position: absolute;
     top: 50%;
@@ -99,6 +109,7 @@ h2 {
     transition: .5s ease;
 }
 
+/* Cambia la posición y el tamaño de las etiquetas cuando los elementos de entrada asociados están enfocados o son válidos. */
 .input-box input:focus~label,
 .input-box input:valid~label {
     top: 1px;
@@ -106,21 +117,25 @@ h2 {
     padding:  0 6px;
 }
 
+/* Establece el estilo para los enlaces de "contraseña olvidada". */
 .forgot-pass {
    margin: -15px 0 10px;
    text-align: center; 
 }
 
+/* Establece el estilo para los enlaces dentro de los elementos de "contraseña olvidada". */
 .forgot-pass > a {
     font-size: .85em;
     color: #ffffff;
     text-decoration: none;
 }
 
+/* Cambia el estilo de los enlaces cuando se pasa el ratón por encima. */
 .forgot-pass a:hover {
     text-decoration: underline;
 }
 
+/* Establece el estilo para los botones. */
 .btn {
     width: 100%;
     height: 45px;
